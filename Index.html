@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperio Zambia</title>
+    <meta name="description" content="Imperio Automotive provides top-quality automotive services, partnering with AutoTrader and Cars.co.za. Explore our services for unmatched excellence.">
+    <meta name="keywords" content="Imperio zambia, AutoTrader, Cars.co.za, automotive services">
+    <meta name="author" content="Bessy Mosomane">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Link to Helvetica Neue font (as a fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            padding-top: 80px; /* Adjusted to match the navbar height */
+        }
+
+        /* Header Section with Gradient and Background Image */
+        header {
+            background: radial-gradient( circle, rgba(0, 0, 0, 0.4) 60%, /* Softer dark center */
+            rgba(0, 0, 0, 0.6) 100% /* Less intense darker edges */
+            ), linear-gradient( to bottom, rgba(0, 0, 0, 0.2) 50%, /* Lighter transparent black */
+            rgba(255, 255, 255, 0.7) 100% /* Softer white at the bottom */
+            ), url('img/100.jpg');
+            /* Replace with your image path */
+            background-size: cover; /* Ensure the background image covers the entire section */
+            background-position: center; /* Center the background image */
+            height: 500px; /* Set the height of the header */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center-align text */
+            padding-left: 50px; /* Space from the left for the text */
+            position: relative;
+        }
+
+        .heading-container {
+                margin-top: 30px; /* Adjust this value to move it lower if needed */
+    display: flex;
+    flex-direction: column; /* Stack lines vertically */
+    gap: 10px; /* Space between lines */
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.900rem;
+        }
+
+        .line {
+            display: flex;
+            justify-content: center;
+            align-items: baseline; /* Align h1 and p properly */
+            gap: 5px; /* Adjust spacing between elements */
+            color: white;
+        }
+
+            .line h1 {
+                margin: 0;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            .line p {
+                margin: 0;
+                font-size: 3rem;
+            }
+
+
+
+        /* Discover Now Button (Styled Like BMW's) */
+        .discover-btn {
+            padding: 12px 50px;
+            background-color: black; /* White background for the button */
+            color: white; /* Black text color */
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 90px; /* Rounded corners (BMW-style) */
+            border: 1px solid black; /* Thin border around the button */
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+            font-family: "Open Sans", sans-serif;
+        }
+
+
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            header {
+                height: 350px; /* Reduce header height further for smaller screens */
+                padding-left: 20px; /* Further reduce padding */
+            }
+
+                header h1 {
+                    font-size: 1rem; /* Further reduce font size of the title */
+                    margin-bottom: 0; /* Remove bottom margin */
+                }
+
+                header p {
+                    font-size: 1rem; /* Further reduce font size of the subtitle */
+                    margin-top: 0; /* Remove top margin */
+                }
+
+            .discover-btn {
+                padding: 10px 30px; /* Further reduce button padding */
+                font-size: 1rem; /* Further reduce button font size */
+                border-radius: 120px; /* More rounded corners */
+                display: inline-block; /* Ensure the button respects the parent alignment */
+                margin: 0 auto; /* Center in a block-level container */
+                text-align: center;
+            }
+
+            .center-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Optional, full viewport height */
+                text-align: center; /* Fallback for older browsers */
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            header {
+                height: 350px; /* Reduce header height further for smaller screens */
+                padding-left: 20px; /* Further reduce padding */
+            }
+
+
+            .discover-btn {
+                padding: 10px 30px; /* Further reduce button padding */
+                font-size: 1rem; /* Further reduce button font size */
+                border-radius: 110px; /* More rounded corners */
+            }
+        }
+
+
+        @media screen and (max-width: 480px) {
+            header {
+                height: 300px; /* Reduce header height for very small screens */
+                padding-left: 15px; /* Further reduce padding */
+                text-align: center; /* Center text on very small screens */
+                justify-content: flex-start; /* Align content to the top */
+                align-items: center; /* Center content horizontally */
+                display: flex; /* Use flexbox for layout */
+                flex-direction: column; /* Stack content vertically */
+            }
+
+                header h1 {
+                    font-size: 1rem; /* Further reduce font size of the title */
+                    margin-top: 10px; /* Add some margin from the top edge */
+                }
+
+                header p {
+                    font-size: 0.9rem; /* Further reduce font size of the subtitle */
+                }
+
+            .discover-btn {
+                position: absolute; /* Position the button absolutely within its container */
+                bottom: 10px; /* Distance from the bottom edge */
+
+                padding: 8px 25px; /* Reduce button padding */
+                font-size: 1rem; /* Set button font size to 1rem */
+                border-radius: 100px; /* Even more rounded corners */
+                display: flex; /* Ensures proper alignment of content inside the button */
+                align-items: center; /* Center content vertically within the button */
+                justify-content: center; /* Center content horizontally within the button */
+            }
+        }
+
+
+
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #fff;
+            width: 100%;
+            font-family: "Lato", sans-serif;
+        }
+
+            /* Logo Section */
+            .navbar .logo img {
+                height: 40px;
+                width: auto;
+            }
+
+            /* Navigation Links (Default for Larger Screens) */
+            .navbar .nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+
+        /* Hidden Navigation Links for Mobile */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: #fff;
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                padding: 0;
+            }
+
+                .navbar .nav-links.active {
+                    max-height: 300px; /* Adjust based on content */
+                    padding: 1rem 0;
+                }
+        }
+
+        /* Nav Links */
+        .navbar .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+            /* Hover Effects for Links */
+            .navbar .nav-links a:hover {
+                color: white;
+                background: black;
+                border-radius: 15px; /* Adjust the curve as needed */
+                padding: 5px 10px; /* Add padding for better spacing */
+                transition: all 0.3s ease; /* Smooth transition */
+            }
+
+            /* Click Effect for Links */
+            .navbar .nav-links a:active {
+                background: black;
+                color: white; /* Optional: Change text color on click */
+                border-radius: 15px;
+                padding: 5px 10px; /* Ensure consistency with hover */
+            }
+
+
+
+            .navbar .nav-links a:hover::after {
+                transform: scaleX(1);
+            }
+
+        /* Burger Menu */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1001; /* Ensure it stays above nav links */
+        }
+
+            .menu-icon span {
+                width: 25px;
+                height: 3px;
+                background-color: black;
+                transition: all 0.3s ease;
+            }
+
+            /* Toggle to X */
+            .menu-icon.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-icon.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-icon.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: flex;
+            }
+
+            /* Hover Effects for Links */
+            .navbar .nav-links a:hover {
+                color: white;
+                background: black;
+                border-radius: 15px; /* Adjust the curve as needed */
+                padding: 5px 10px; /* Add padding for better spacing */
+                transition: all 0.3s ease; /* Smooth transition */
+            }
+
+            /* Click Effect for Links */
+            .navbar .nav-links a:active {
+                background: black;
+                color: white; /* Optional: Change text color on click */
+                border-radius: 15px;
+                padding: 5px 10px; /* Ensure consistency with hover */
+            }
+        }
+
+
+
+        /* Featured Section Styling */
+        .featured-section {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+        }
+
+            .featured-section h2 {
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 15px;
+                font-family: "Lato", sans-serif;
+            }
+
+            .featured-section p {
+                font-size: 1em;
+                color: black;
+                margin-bottom: 40px;
+                font-family: "Lato", sans-serif;
+            }
+
+        /* Featured Vehicles Grid */
+        .featured-vehicles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Vehicle Card Styling */
+        .vehicle-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+            .vehicle-card:hover {
+                transform: scale(1.05);
+            }
+
+            .vehicle-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+        .vehicle-info {
+            padding: 15px;
+            text-align: left;
+        }
+
+            .vehicle-info h3 {
+                font-size: 1.5em;
+                color: #333;
+                margin: 0;
+            }
+
+            .vehicle-info p {
+                font-size: 1em;
+                color: #666;
+                margin: 10px 0;
+            }
+
+        .vehicle-price {
+            font-size: 1.3em;
+            color: #ff5722;
+            font-weight: 600;
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 1024px) {
+            .vehicle-card {
+                width: 45%; /* Adjust to 2 cards per row */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .vehicle-card {
+                width: 100%; /* Stack vehicle cards on smaller screens */
+            }
+
+            .featured-section h2 {
+                font-size: 2em; /* Adjust heading font size */
+            }
+
+            .featured-section p {
+                font-size: 1em; /* Adjust paragraph font size */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .vehicle-card {
+                width: 100%; /* Stack vehicle cards on very small screens */
+                margin: 10px 0; /* Reduce margin */
+            }
+
+            .featured-section h2 {
+                font-size: 1.8em; /* Further reduce heading font size */
+            }
+
+            .featured-section p {
+                font-size: 0.9em; /* Reduce paragraph font size for very small screens */
+            }
+        }
+
+
+        /* About Us Section Styles */
+        .about-us-section {
+            background-color: white; /* Remove gradient background and set to white */
+            padding: 80px 20px;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .about-us-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Adds spacing between content and image */
+        }
+
+        .about-us-content {
+            flex: 1; /* Content takes up equal space */
+            color: #212121; /* Adjust text color for white background */
+            text-align: left; /* Align text to the left */
+        }
+
+            .about-us-content h2 {
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                font-family: "Lato", sans-serif;
+            }
+
+            .about-us-content p {
+                font-size: 18px;
+                margin-bottom: 30px;
+                line-height: 1.6;
+            }
+
+        .btn-find-more {
+            font-size: 18px;
+            padding: 10px 25px;
+            background-color: black; /* Accent color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-find-more:hover {
+                background-color: black;
+            }
+
+        .about-us-image {
+            flex: 1; /* Image takes up equal space */
+            text-align: right; /* Align image to the right */
+        }
+
+            .about-us-image img {
+                max-width: 70%;
+                height: auto;
+                border-radius: 10px; /* Optional for rounded corners */
+            }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .about-us-container {
+                flex-direction: column; /* Stack content and image */
+                text-align: center; /* Center-align text for smaller screens */
+            }
+
+            .about-us-content {
+                text-align: center; /* Center text on smaller screens */
+            }
+
+            .about-us-image {
+                text-align: center; /* Center image */
+            }
+        }
+
+
+
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .about-us-section {
+                padding: 60px 0; /* Reduce padding on smaller screens */
+            }
+
+                .about-us-section .about-us-content {
+                    max-width: 90%; /* Allow content to be more flexible on smaller screens */
+                    padding: 15px; /* Slightly reduce padding */
+                }
+
+                .about-us-section h2 {
+                    font-size: 28px; /* Reduce font size for the heading */
+                }
+
+                .about-us-section p {
+                    font-size: 16px; /* Adjust font size for better readability */
+                    margin-bottom: 20px;
+                }
+
+            .btn-find-more {
+                font-size: 16px; /* Adjust button font size */
+                padding: 8px 20px; /* Adjust padding on smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-us-section {
+                padding: 40px 0; /* Further reduce padding for very small screens */
+            }
+
+                .about-us-section .about-us-content {
+                    max-width: 95%; /* Make content almost full width on very small screens */
+                    padding: 10px; /* Further reduce padding */
+                }
+
+                .about-us-section h2 {
+                    font-size: 22px; /* Further reduce heading font size */
+                    margin-bottom: 15px;
+                }
+
+                .about-us-section p {
+                    font-size: 14px; /* Further adjust font size for small screens */
+                    margin-bottom: 15px;
+                }
+
+            .btn-find-more {
+                font-size: 14px; /* Further reduce button text size */
+                padding: 6px 15px; /* Adjust padding for very small screens */
+            }
+        }
+
+
+
+        /* ------------------------------------------------------------------- */
+
+        /* Accredited Partners Section Styles */
+        .accredited-partners-section {
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+            .accredited-partners-section h2 {
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 40px;
+                color: black;
+                font-family: "Lato", sans-serif;
+            }
+
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .partner-logo {
+            max-width: 350px; /* Limit size for logos */
+            max-height: 80px;
+            margin: 0 20px;
+            filter: grayscale(100%) brightness(0);
+        }
+
+        /* Line Under the Heading */
+        .heading-line {
+            width: 100px; /* Length of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: grey; /* Line color */
+            margin: 0 auto 40px; /* Center the line and add spacing below */
+        }
+
+        /* Line Under the Heading */
+        .heading-line3 {
+            width: 100px; /* Length of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: black; /* Line color */
+            margin: 0 auto 40px; /* Center the line and add spacing below */
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .accredited-partners-section h2 {
+                font-size: 28px; /* Reduce font size for smaller screens */
+                margin-bottom: 20px;
+            }
+
+            .partners-logos {
+                gap: 20px; /* Reduce gap between logos on smaller screens */
+                filter: grayscale(100%) brightness(0);
+            }
+
+            .partner-logo {
+                max-width: 120px; /* Resize logos for smaller screens */
+                max-height: 60px;
+                filter: grayscale(100%) brightness(0);
+            }
+
+            .heading-line {
+                width: 80px; /* Reduce line width on smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .accredited-partners-section {
+                padding: 60px 0; /* Reduce padding for very small screens */
+            }
+
+                .accredited-partners-section h2 {
+                    font-size: 24px; /* Further reduce font size on very small screens */
+                    margin-bottom: 15px;
+                }
+
+            .partners-logos {
+                gap: 10px; /* Reduce the gap even more for very small screens */
+                filter: grayscale(100%) brightness(0);
+            }
+
+            .partner-logo {
+                max-width: 100px; /* Further resize logos for small devices */
+                max-height: 50px;
+            }
+
+            .heading-line {
+                width: 60px; /* Further reduce line width */
+            }
+        }
+
+
+
+        /* ------------------------------------------------------------------- */
+
+        /* Footer Section Styles */
+        .footer-section {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/footer.jpg') no-repeat center center/cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-family: "Lato", sans-serif;
+            padding: 40px 0;
+        }
+
+        /* Footer Navigation Links */
+        .footer-nav {
+            margin-top: 20px;
+        }
+
+        .footer-nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            flex-direction: row; /* Ensure links are in a horizontal row */
+            justify-content: center;
+            align-items: center;
+        }
+
+            .footer-nav-links li {
+                display: inline-block; /* Makes each list item inline, avoiding vertical stacking */
+            }
+
+            .footer-nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease-in-out;
+            }
+
+                .footer-nav-links a:hover {
+                    color: gray; /* Accent color for hover effect */
+                }
+
+        /* Footer Container Styles */
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1); /* Turns image white */
+        }
+
+        /* Footer Left, Right, and Contact */
+        .footer-left, .footer-right, .footer-contact {
+            flex: 1;
+            margin: 0 10px;
+            text-align: left;
+        }
+
+            .footer-left h3, .footer-right h3, .footer-contact h3 {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 8px;
+                letter-spacing: 1px;
+            }
+
+            .footer-left p, .footer-right p, .footer-contact p {
+                font-size: 14px;
+                line-height: 1.6;
+                color: white;
+            }
+
+        .footer-contact {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+            .footer-contact p {
+                margin: 5px 0;
+            }
+
+            .footer-contact a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease-in-out;
+            }
+
+                .footer-contact a:hover {
+                    color: gray; /* Accent color for hover effect */
+                }
+
+        /* Footer Emails */
+        .footer-emails {
+            font-size: 14px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between email links */
+        }
+
+            .footer-emails .email-link {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                display: inline-flex; /* Align icon and text horizontally */
+                align-items: center;
+                gap: 5px; /* Space between icon and text */
+                transition: color 0.3s ease-in-out;
+            }
+
+                .footer-emails .email-link:hover {
+                    color: gray; /* Accent color for hover effect */
+                }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 13px;
+            color: #bbb;
+        }
+
+            .footer-bottom p {
+                margin: 0;
+            }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            /* Adjust footer container for smaller screens */
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Align footer-left, footer-right, and footer-contact properly for small screens */
+            .footer-left, .footer-right, .footer-contact {
+                margin-bottom: 20px;
+                text-align: center;
+                flex: 100%;
+            }
+
+            /* Adjust footer-emails font size */
+            .footer-emails {
+                font-size: 13px;
+                flex-direction: column; /* Stack email links vertically on small screens */
+                text-align: center;
+            }
+
+            .footer-nav-links {
+                flex-direction: column; /* Stack nav links vertically on smaller screens */
+            }
+
+            .footer-logo {
+                width: 100px; /* Smaller logo for mobile */
+                margin-bottom: 15px;
+            }
+
+            /* Footer bottom adjustments */
+            .footer-bottom {
+                padding: 15px;
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Further adjustments for very small devices */
+            .footer-left h3, .footer-right h3, .footer-contact h3 {
+                font-size: 16px;
+            }
+
+            .footer-left p, .footer-right p, .footer-contact p {
+                font-size: 13px;
+            }
+
+            .footer-nav-links a {
+                font-size: 14px; /* Adjust link font size for very small screens */
+            }
+        }
+
+
+        .heading-container {
+            display: inline-block;
+        }
+
+            .heading-container .line h1 {
+                font-size: 3rem; /* Adjust for large screens */
+                margin: 0;
+            }
+
+            .heading-container .line p {
+                font-size: 1.5rem;
+                margin: 0;
+            }
+
+        .heading-line3 {
+            background-color: white; /* Default line color */
+            margin: 20px 0;
+        }
+
+
+        /* Styles for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                text-align: left; /* Align to the left */
+                padding: 20px 10px; /* Add padding for smaller screens */
+            }
+
+            .heading-container {
+                text-align: left; /* Align content inside the container */
+            }
+
+                .heading-container .line h1 {
+                    font-size: 2rem; /* Smaller text size */
+                }
+
+                .heading-container .line p {
+                    font-size: 1rem;
+                }
+
+            .heading-line3 {
+                background-color: #fff; /* Change the line color to white */
+            }
+
+            .discover-btn {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 5px;
+            }
+
+            .heading-container .line h1 {
+                font-size: 1.5rem; /* Even smaller for very small devices */
+            }
+
+            .heading-container .line p {
+                font-size: 0.9rem;
+            }
+
+            .discover-btn {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section with Gradient Background and Button -->
+<!-- Header Section with Gradient Background and Button -->
+<header>
+    <div class="heading-container">
+        <div class="line">
+            <h1><span class="bold">Driven</span></h1>
+            <p>to</p>
+        </div>
+        <div class="line">
+            <h1><span class="bold">Deliver</span></h1>
+            <p>Excellence</p>
+        </div>
+    </div>
+    <div class="heading-line3"></div>
+    <a href="services.html" class="discover-btn">Discover More.</a>
+</header>
+
+
+
+<!-- Navbar Section -->
+<div class="navbar">
+    <!-- Logo Section -->
+    <a href="Index.html" class="logo">
+        <img src="img/logo.png" alt="Imperio Automotive Logo">
+    </a>
+
+    <!-- Burger Menu Icon -->
+    <div class="menu-icon" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <a href="Index.html">Home</a>
+        <a href="About.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+</div>
+
+<!-- Featured Vehicles Section -->
+<section class="featured-section">
+    <p> Imperio facilitates vehicle purchases by sourcing cars directly fron trusted platforms like Cars.co.za
+    and AutoTader.co.za. Once customers identify their desired vehicle, Imperio handles the logistics
+        of procurement, importation, and delivery to Zambia,
+        ensuring a smooth and reliable experiene. </p>
+    <p>This process allows customers to access a wide selection of quality vehicles while relying on Imperio for expert assistance in acquiring them.</p>
+    
+    <!-- Explore Links -->
+    <h2>Explore.</h2>
+    <br/>
+    <p>
+        <a href="https://www.autotrader.co.za" target="_blank">
+            <img src="img/logo1.png" alt="AutoTrader Logo" style="filter: grayscale(100%) brightness(0); width: 250px; height: auto;"> 
+        </a>  
+        <a href="https://www.cars.co.za" target="_blank">
+            <img src="img/logo2.png" alt="Cars Logo" style="filter: grayscale(100%) brightness(0); width: 250px; height: auto;">
+        </a>
+        
+    </p>
+    
+
+</section>
+
+
+<section class="about-us-section">
+    <div class="about-us-container">
+        <div class="about-us-content">
+            <h2>About.</h2>
+           
+            <p>At Imperio Automotive, we are dedicated to providing an exceptional automotive experience. With a focus on luxury, performance, and customer satisfaction, we bring you the finest selection of new and pre-owned vehicles.</p>
+            <a href="About.html" class="btn-find-more">Find out more</a>
+        </div>
+        <div class="about-us-image">
+            <img src="img/background4.jpg" alt="About Us Image">
+        </div>
+    </div>
+</section>
+
+
+<!-- Accredited Partners Section -->
+<section class="accredited-partners-section">
+    <h2>Our Accredited Partners.</h2>
+    <div class="partners-logos">
+        <img src="img/assets/logo4.png" alt="FNB" class="partner-logo">
+        <img src="img/assets/logo2.png" alt="MTN" class="partner-logo">
+        <img src="img/assets/logo3.png" alt="Prudential" class="partner-logo">
+        <img src="img/assets/logo20.png" alt="Stanbic" class="partner-logo">
+        <img src="img/assets/logo6.png" alt="Absa" class="partner-logo">
+        <img src="img/assets/logo30.png" alt="Zanoco" class="partner-logo">
+    </div>
+</section>
+
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-left">
+            <!-- White Logo Image -->
+            <img src="img/logo.png" alt="Imperio Automotive Logo" class="footer-logo">
+            
+            <!-- Footer Navigation Links (if any) -->
+        </div>
+        <div class="footer-contact">
+            <p>
+                <strong>Imperio Investment Ltd <br> </strong>
+                Stand No. 848, <br>
+                Cnr of Lagos & Addis Adaba Rd, <br>
+                Lusaka - Zambia <br>
+                <br/>
+                Phone: +260 972 220 060 | +270 977 775 599 <br>
+                Email: <a href="mailto:info@imperiozambia.co.za">info@imperiozambia.co.za</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Imperio Automotive. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.querySelector('.menu-icon');
+    navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('active'); // Toggle the X icon
+}
+
+
+
+</script>
+
+
+</body>
+</html>
