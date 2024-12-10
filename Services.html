@@ -669,35 +669,13 @@
             background: #fff; /* White background for the page */
             color: #000; /* Black text */
         }
+        <!--
 
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background: #333;
-            color: white;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
-        .menu-icon {
-            display: none;
-            cursor: pointer;
-        }
-
-        .nav-links a {
-            color: white;
-            margin-left: 15px;
-            text-decoration: none;
-        }
-
+        
         /* Services Section */
         .services-section {
-            background: #fff;
-            color: #000;
+            background: #fff; /* White background */
+            color: #000; /* Black text */
             padding: 50px 20px;
             text-align: center;
         }
@@ -722,123 +700,151 @@
 
         .carousel-track {
             display: flex;
-            transition: transform 0.8s ease-in-out;
+            transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.5s ease-in-out;
             width: 100%;
         }
 
         .carousel-item {
-            flex: 0 0 100%; /* Ensure each item takes up 100% of the carousel width */
-            margin: 0;
+            position: relative;
+            flex: 0 0 80%;
+            margin: 0 10px;
             text-align: center;
-            opacity: 0;
+            opacity: 0.3;
             transform: scale(0.8);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
             transform-origin: center center;
             background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text visibility */
             border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative;
+            padding: 15px; /* Add padding to text container */
         }
 
             .carousel-item.active {
                 opacity: 1;
                 transform: scale(1);
-                z-index: 2; /* Ensure the active item is on top */
             }
 
             .carousel-item img {
                 width: 100%;
-                height: 60vh; /* Adjust the image height to be responsive */
+                height: 250px;
                 object-fit: cover;
                 border-radius: 15px;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease-in-out;
+            }
+            .carousel-item:nth-child(3) img {
+                object-fit: cover;
+                object-position: center 25%; /* Moves the visible area down slightly to show faces */
             }
 
-            /* Fade-in text when item is active */
-            .carousel-item.active h2,
-            .carousel-item.active p {
-                opacity: 1;
-                visibility: visible;
+            .carousel-item:last-child img {
+                object-position: top; /* Focus on the upper part of the image */
             }
 
-            .carousel-item h2,
-            .carousel-item p {
-                transition: opacity 0.5s ease-in-out; /* Fade-in text with transition */
-                opacity: 0;
-                visibility: hidden; /* Hide text by default */
-            }
-
-        /* Carousel Buttons */
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            z-index: 10;
-            font-size: 2rem;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            transform: translateY(-50%);
-        }
-
-        .prev {
-            left: 20px;
-        }
-
-        .next {
-            right: 20px;
-        }
-
-        /* Make content responsive */
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 50vh; /* Adjust image height for medium screens */
+            .carousel-item.active img {
+                transform: scale(1.05);
             }
 
             .carousel-item h2 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+                color: #34495e;
+                margin: 15px 0 10px;
+                word-wrap: break-word; /* Prevent text overflow */
             }
 
             .carousel-item p {
                 font-size: 1rem;
-                max-height: 130px;
+                line-height: 1.5;
+                color: #666666;
+                max-height: 150px; /* Limit height for long text */
+                overflow-y: auto; /* Scroll for long content */
+                padding: 5px;
+            }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(52, 73, 94, 0.8);
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 10;
+            transition: background 0.3s, transform 0.2s ease-in-out;
+        }
+
+            .carousel-button:hover {
+                background: rgba(44, 62, 80, 0.9);
+                transform: scale(1.1);
+            }
+
+            .carousel-button.prev {
+                left: 10px;
+            }
+
+            .carousel-button.next {
+                right: 10px;
+            }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .carousel {
+                width: 95%;
+            }
+
+            .carousel-item {
+                flex: 0 0 90%;
+                margin: 0 5px;
+            }
+
+                .carousel-item h2 {
+                    font-size: 1.5rem;
+                }
+
+                .carousel-item p {
+                    font-size: 0.9rem;
+                }
+
+            .carousel-button {
+                font-size: 1.2rem;
+                padding: 10px;
             }
         }
 
         @media (max-width: 480px) {
-            .carousel-item img {
-                height: 40vh; /* Adjust image height for small screens */
-            }
-
             .carousel-item h2 {
                 font-size: 1.2rem;
             }
 
             .carousel-item p {
-                font-size: 0.9rem;
-                max-height: 100px;
+                font-size: 0.85rem;
+            }
+
+            .carousel-button {
+                font-size: 1rem;
+                padding: 8px;
             }
         }
     </style>
 </head>
 <body>
-
     <!-- Navbar Section -->
     <div class="navbar">
+        <!-- Logo Section -->
         <a href="Index.html" class="logo">
             <img src="img/logo.png" alt="Imperio Automotive Logo">
         </a>
+
+        <!-- Burger Menu Icon -->
         <div class="menu-icon" onclick="toggleNav()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
+        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="Index.html">Home</a>
             <a href="About.html">About us</a>
@@ -860,31 +866,44 @@
             <div class="carousel-item active">
                 <img src="img/vehicle-financing.jpg" alt="Vehicle Financing">
                 <h2>Vehicle Financing Backed Purchases</h2>
-                <p>Purchase vehicles through Imperio Investments using vehicle asset financing. Contact us for details on bank partnerships.</p>
+                  <p>Purchase vehicles through Imperio Investments
+                    using vehicle asset financing.
+                    Contact us for details on bank partnerships.</p>
             </div>
             <!-- Item 2 -->
             <div class="carousel-item">
                 <img src="img/vehicle-financing1.jpg" alt="Corporate Purchases">
                 <h2>Corporate Purchases</h2>
-                <p>We offer tailored payment plans for private and public entities with upfront delivery of vehicles via valid purchase orders.</p>
+                 <p>We offer tailored payment plans
+                    for private and public entities
+                    with upfront delivery of
+                    vehicles via valid purchase orders.
+                </p>
             </div>
             <!-- Item 3 -->
             <div class="carousel-item">
                 <img src="img/vehicl3.jpg" alt="Self-financed Purchases">
                 <h2>Self-financed Purchases</h2>
-                <p>Our team sources vehicles locally, regionally, or internationally for personal purchases.</p>
+                <p>Our team sources vehicles locally, regionally, 
+               
+                   or internationally for personal purchases.</p>
             </div>
             <!-- Item 4 -->
             <div class="carousel-item">
                 <img src="img/vehicl4.jpg" alt="Logistics & Handling">
                 <h2>Logistics & Handling</h2>
-                <p>We cover transportation, importation, registration, and clearing procedures for smooth vehicle acquisition.</p>
+                <p>We cover transportation, importation,
+                   registration,
+                   and clearing procedures 
+                 for smooth vehicle acquisition.</p>
             </div>
             <!-- Item 5 -->
             <div class="carousel-item">
                 <img src="img/vehicl5.jpg" alt="Brokerage">
                 <h2>Brokerage</h2>
-                <p>We connect buyers and sellers of motor vehicles through our extensive local and international networks.</p>
+                <p>We connect buyers and sellers of motor vehicles
+                   through
+                   our extensive local and international networks.</p>
             </div>
         </div>
         <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -904,7 +923,7 @@
                 }
             });
 
-            const offset = -currentIndex * items[0].offsetWidth; // Adjust based on your layout
+            const offset = -currentIndex * items[0].offsetWidth;
             track.style.transform = `translateX(${offset}px)`;
         }
 
@@ -920,15 +939,10 @@
             updateCarousel();
         }
 
-        // Add event listeners for navigation
-        document.querySelector('.next').addEventListener('click', () => moveSlide(1));
-        document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-
-        window.addEventListener('resize', updateCarousel); // Adjust on window resize
+        window.addEventListener('resize', updateCarousel);
     </script>
 </body>
 </html>
-
 
 
 
