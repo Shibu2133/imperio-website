@@ -878,7 +878,7 @@
                 }
             });
 
-            const offset = -currentIndex * items[0].offsetWidth;
+            const offset = -currentIndex * items[0].offsetWidth; // Adjust based on your layout
             track.style.transform = `translateX(${offset}px)`;
         }
 
@@ -894,7 +894,12 @@
             updateCarousel();
         }
 
-        window.addEventListener('resize', updateCarousel);
+        // Add event listeners for navigation
+        document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+        document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+
+        window.addEventListener('resize', updateCarousel); // Adjust on window resize
+
     </script>
 </body>
 </html>
