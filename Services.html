@@ -737,28 +737,18 @@
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             }
 
-            .carousel-item h2 {
-                font-size: 2rem;
-                color: #34495e;
-                margin: 15px 0;
-                text-align: center;
-                word-wrap: break-word; /* Prevent text overflow */
-                width: 90%;
-                opacity: 1;
-                visibility: visible; /* Ensure text is visible when active */
+            .carousel-item h2,
+            .carousel-item p {
+                transition: opacity 0.5s ease-in-out; /* Fade-in text with transition */
+                opacity: 0;
+                visibility: hidden; /* Hide text by default */
             }
 
-            .carousel-item p {
-                font-size: 1.2rem;
-                line-height: 1.5;
-                color: #666666;
-                max-height: 150px;
-                overflow-y: auto;
-                padding: 10px;
-                width: 90%; /* Adjust width to fit smaller screens */
-                margin: 0 auto;
+            /* Ensure text is visible on active item */
+            .carousel-item.active h2,
+            .carousel-item.active p {
                 opacity: 1;
-                visibility: visible; /* Ensure paragraph is visible when active */
+                visibility: visible; /* Ensure text is visible when active */
             }
 
         /* Make content responsive */
