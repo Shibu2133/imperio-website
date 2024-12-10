@@ -669,13 +669,35 @@
             background: #fff; /* White background for the page */
             color: #000; /* Black text */
         }
-        <!--
 
-        
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
         /* Services Section */
         .services-section {
-            background: #fff; /* White background */
-            color: #000; /* Black text */
+            background: #fff;
+            color: #000;
             padding: 50px 20px;
             text-align: center;
         }
@@ -737,6 +759,13 @@
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             }
 
+            /* Fade-in text when item is active */
+            .carousel-item.active h2,
+            .carousel-item.active p {
+                opacity: 1;
+                visibility: visible;
+            }
+
             .carousel-item h2,
             .carousel-item p {
                 transition: opacity 0.5s ease-in-out; /* Fade-in text with transition */
@@ -744,12 +773,27 @@
                 visibility: hidden; /* Hide text by default */
             }
 
-            /* Ensure text is visible on active item */
-            .carousel-item.active h2,
-            .carousel-item.active p {
-                opacity: 1;
-                visibility: visible; /* Ensure text is visible when active */
-            }
+        /* Carousel Buttons */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
 
         /* Make content responsive */
         @media (max-width: 768px) {
@@ -781,25 +825,20 @@
                 max-height: 100px;
             }
         }
-
     </style>
 </head>
 <body>
+
     <!-- Navbar Section -->
     <div class="navbar">
-        <!-- Logo Section -->
         <a href="Index.html" class="logo">
             <img src="img/logo.png" alt="Imperio Automotive Logo">
         </a>
-
-        <!-- Burger Menu Icon -->
         <div class="menu-icon" onclick="toggleNav()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="Index.html">Home</a>
             <a href="About.html">About us</a>
@@ -821,44 +860,31 @@
             <div class="carousel-item active">
                 <img src="img/vehicle-financing.jpg" alt="Vehicle Financing">
                 <h2>Vehicle Financing Backed Purchases</h2>
-                  <p>Purchase vehicles through Imperio Investments
-                    using vehicle asset financing.
-                    Contact us for details on bank partnerships.</p>
+                <p>Purchase vehicles through Imperio Investments using vehicle asset financing. Contact us for details on bank partnerships.</p>
             </div>
             <!-- Item 2 -->
             <div class="carousel-item">
                 <img src="img/vehicle-financing1.jpg" alt="Corporate Purchases">
                 <h2>Corporate Purchases</h2>
-                 <p>We offer tailored payment plans
-                    for private and public entities
-                    with upfront delivery of
-                    vehicles via valid purchase orders.
-                </p>
+                <p>We offer tailored payment plans for private and public entities with upfront delivery of vehicles via valid purchase orders.</p>
             </div>
             <!-- Item 3 -->
             <div class="carousel-item">
                 <img src="img/vehicl3.jpg" alt="Self-financed Purchases">
                 <h2>Self-financed Purchases</h2>
-                <p>Our team sources vehicles locally, regionally, 
-               
-                   or internationally for personal purchases.</p>
+                <p>Our team sources vehicles locally, regionally, or internationally for personal purchases.</p>
             </div>
             <!-- Item 4 -->
             <div class="carousel-item">
                 <img src="img/vehicl4.jpg" alt="Logistics & Handling">
                 <h2>Logistics & Handling</h2>
-                <p>We cover transportation, importation,
-                   registration,
-                   and clearing procedures 
-                 for smooth vehicle acquisition.</p>
+                <p>We cover transportation, importation, registration, and clearing procedures for smooth vehicle acquisition.</p>
             </div>
             <!-- Item 5 -->
             <div class="carousel-item">
                 <img src="img/vehicl5.jpg" alt="Brokerage">
                 <h2>Brokerage</h2>
-                <p>We connect buyers and sellers of motor vehicles
-                   through
-                   our extensive local and international networks.</p>
+                <p>We connect buyers and sellers of motor vehicles through our extensive local and international networks.</p>
             </div>
         </div>
         <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
@@ -899,10 +925,10 @@
         document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
 
         window.addEventListener('resize', updateCarousel); // Adjust on window resize
-
     </script>
 </body>
 </html>
+
 
 
 
